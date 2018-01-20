@@ -1,0 +1,8 @@
+:root {
+  --max-width: 40em;
+}
+
+.container {
+  max-width: var(--max-width);
+  margin: 4em auto;
+}

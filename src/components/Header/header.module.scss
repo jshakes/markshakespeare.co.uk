@@ -1,0 +1,26 @@
+.nav {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+  white-space: nowrap;
+  margin-left: 2em;
+}
+
+.navItem {
+  display: inline-block;
+  margin-right: 2em;  
+}
+
+.siteHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.siteTitle {
+  margin: 0 0 0.5em;
+}
+
+.siteDescription {
+  margin: 0;
+}
