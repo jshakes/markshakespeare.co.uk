@@ -9,13 +9,13 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-typography',
       options: {
-        pathToConfigModule: `src/utils/typography.js`,
+        pathToConfigModule: 'src/utils/typography.js',
       },
     },
     {
-      resolve: `gatsby-plugin-google-analytics`,
+      resolve: 'gatsby-plugin-google-analytics',
       options: {
-        trackingId: "UA-6245948-8",
+        trackingId: 'UA-6245948-8',
         anonymize: true,
       },
     },
