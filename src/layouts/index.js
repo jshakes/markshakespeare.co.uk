@@ -5,6 +5,8 @@ import styles from './layout.module.scss';
 import Header from '../components/Header';
 import { siteMetadata } from '../../gatsby-config';
 
+const d = new Date();
+
 export default props => {
   console.log(props);
   return (
@@ -17,6 +19,7 @@ export default props => {
       </Helmet>
       <Header />
       {props.children()}
+      <footer>&copy; Mark Shakespeare, {d.getFullYear()}</footer>
     </div>
   );
 };
