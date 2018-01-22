@@ -1,7 +1,8 @@
 {
-  "name": "mark-shakespeare-co",
+  "name": "mark-shakespeare-co-uk",
   "version": "1.0.0",
-  "author": "James Shakespeare",
+  "author": "James Shakespeare <j@jshakespeare.com>",
+  "homepage": "https://markshakespeare.co.uk",
   "dependencies": {
     "gatsby": "^1.9.158",
     "gatsby-link": "^1.6.34",
@@ -18,7 +19,6 @@
   "keywords": [
     "gatsby"
   ],
-  "license": "MIT",
   "main": "n/a",
   "scripts": {
     "build": "gatsby build",
