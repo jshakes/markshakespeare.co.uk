@@ -15,8 +15,4 @@ const AboutPage = props => {
   );  
 };
 
-exports.data = {
-  title: 'HERE IS THE PAGE TITLE'
-};
-
 export default AboutPage;
