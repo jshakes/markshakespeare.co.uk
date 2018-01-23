@@ -73,14 +73,24 @@ class ImageGrid extends Component {
   }
   
   renderGallery() {
-    return images.map((image, index) => {
-      return <img key={index} src={image.src} onClick={() => this.openLightbox(index)} />;
-    });
+    return (
+      <ul className="image-gallery__items">
+        {images.map(this.renderGalleryItem.bind(this))}
+      </ul>
+    );
+  }
+  
+  renderGalleryItem(image, index) {
+    return (
+      <li className="image-gallery__item" key={index}>
+        <img src={image.src} onClick={() => this.openLightbox(index)} className="image-gallery__image" />;
+      </li>
+    );
   }
   
   render() {
     return (
-      <div>
+      <div className="image-gallery">
         {this.renderGallery()}
         <Lightbox
           images={images}

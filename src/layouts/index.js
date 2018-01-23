@@ -10,7 +10,7 @@ const d = new Date();
 
 export default props => {
   return (
-    <div>
+    <div className="content-wrapper">
       <Helmet>
         <meta charSet="utf-8" />
         <title>{ siteMetadata.title }</title>

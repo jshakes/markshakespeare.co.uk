@@ -1,19 +1,20 @@
-.work-grid__items {
+.image-gallery__items {
   @include reset-ul;
   @include ib-whitespace-fix
 }
 
-.work-grid__item {
+.image-gallery__item {
   vertical-align: top;
   position: relative;
   overflow: hidden;
+  margin: 0;
   @include larger-than(mobile) {
     @include aspect-ratio(1, 1);
     width: 33.333333%;
   }
 }
 
-.work-grid__image {
+.image-gallery__image {
   object-fit: cover;
   @include larger-than(mobile) {
     position: absolute;
@@ -24,7 +25,7 @@
   }
 }
 
-.work-grid__overlay {
+.image-gallery__overlay {
   @include larger-than(mobile) {
     opacity: 0;
     position: absolute;
@@ -36,18 +37,18 @@
     background: rgba(255, 255, 255, 0.5);
     transition: opacity $transition-time;
   }
-  .work-grid__link:hover & {
+  .image-gallery__link:hover & {
     @include larger-than(mobile) {
       opacity: 1;
     }
   }
 }
 
-.work-grid__link {
+.image-gallery__link {
   text-decoration: none;
 }
 
-.work-grid__title{
+.image-gallery__title{
   padding: 0 $width-content-padding-mobile;
   text-decoration: none;
   margin-bottom: 3em;
