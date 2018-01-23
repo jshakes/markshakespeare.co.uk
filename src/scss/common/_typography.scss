@@ -49,3 +49,21 @@ h5,
 h6 {
   font-weight: normal;
 }
+
+blockquote {
+  position: relative;
+  margin: 2em 0;
+  padding-left: 4em;
+  quotes: "\201C""\201D""\2018""\2019";
+  font-style: italic;
+  line-height: 1.5;
+}
+
+blockquote:before {
+  color: $color-feint;
+  content: open-quote;
+  font-size: 6em;
+  position: absolute;
+  left: 0;
+  top: -0.25em;
+}
