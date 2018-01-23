@@ -7,10 +7,8 @@ const Header = () => {
   return (
     <header>
       <nav className="site-nav">
-        <Link to="/" exact className="site-nav__title">
-          <h2>{siteMetadata.title}</h2>
-        </Link>
-        <h5>{siteMetadata.description}</h5>
+        <Link to="/" exact className="site-nav__title">{siteMetadata.title}</Link>
+        <span className="site-nav__tagline">{siteMetadata.description}</span>
         <NavItems />
       </nav>
     </header>

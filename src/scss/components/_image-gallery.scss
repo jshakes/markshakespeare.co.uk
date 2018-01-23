@@ -18,6 +18,7 @@
 .image-gallery__image {
   object-fit: cover;
   transition: opacity 0.25s;
+  cursor: pointer;
   &:hover {
     opacity: 0.5;
   }

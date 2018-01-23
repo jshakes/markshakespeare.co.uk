@@ -8,13 +8,23 @@
 
 .site-nav__title {
   width: 10em;
-  margin-bottom: 2em;
   text-decoration: none;
+  display: block;
+  font-size: 1.25em;
+  color: rgba($color-accent-1, 0.5);
+  margin-bottom: 2em;
+  transition: color 0.25s;
   &:hover {
-    text-decoration: underline;
+    color: rgba($color-accent-1, 1);
   }
+}
+
+.site-nav__tagline {
+  font-size: 2em;
+  display: block;
+  margin-bottom: 2em;
   @include larger-than(mobile) {
-    margin-bottom: 0;
+    width: 66.666666%;
   }
 }
 
