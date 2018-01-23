@@ -1,0 +1,27 @@
+$case-study-thumnail-size-mobile: 5em;
+$case-study-thumnail-size: 9.375em;
+
+.case-study {
+  min-height: $case-study-thumnail-size-mobile;
+  @include larger-than(mobile) {
+    min-height: $case-study-thumnail-size;
+    position: relative;
+    padding-left: #{$case-study-thumnail-size + 2};
+  }
+}
+
+.case-study__thumbnail {
+  float: left;
+  width: $case-study-thumnail-size-mobile;
+  height: $case-study-thumnail-size-mobile;
+  margin: 0.5em 1.5em 1em 0;
+  @include larger-than(mobile) {
+    float: none;
+    width: $case-study-thumnail-size;
+    height: $case-study-thumnail-size;
+    margin: 0.5em 0 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+  }
+}

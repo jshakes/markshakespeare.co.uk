@@ -1,0 +1,23 @@
+.max-width-wrapper {
+  width: 100%;
+  min-width: $width-page-content-min;
+  @include larger-than(tablet) {
+    max-width: $width-page-content-max;
+  }
+}
+
+.content-wrapper {
+  @extend .max-width-wrapper;
+  padding: 0 $width-content-padding-mobile;
+  margin-right: auto;
+  margin-left: auto;
+  background: inherit;
+  position: relative;
+  @include larger-than(mobile) {
+    padding: 0 $width-content-padding;
+  }
+  @include larger-than(full) {
+    padding-right: 0;
+    padding-left: 0;
+  }
+}

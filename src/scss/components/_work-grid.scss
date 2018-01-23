@@ -1,0 +1,64 @@
+.work-grid__items {
+  @include reset-ul;
+  @include ib-whitespace-fix
+}
+
+.work-grid__item {
+  vertical-align: top;
+  position: relative;
+  overflow: hidden;
+  @include larger-than(mobile) {
+    @include aspect-ratio(1, 1);
+    width: 33.333333%;
+  }
+}
+
+.work-grid__image {
+  object-fit: cover;
+  @include larger-than(mobile) {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+  }
+}
+
+.work-grid__overlay {
+  @include larger-than(mobile) {
+    opacity: 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    transition: opacity $transition-time;
+  }
+  .work-grid__link:hover & {
+    @include larger-than(mobile) {
+      opacity: 1;
+    }
+  }
+}
+
+.work-grid__link {
+  text-decoration: none;
+}
+
+.work-grid__title{
+  padding: 0 $width-content-padding-mobile;
+  text-decoration: none;
+  margin-bottom: 3em;
+  color: $color-accent-1;
+  @include larger-than(mobile) {
+    padding: 0;
+    line-height: 1.5;
+    font-size: 3vw;
+    position: absolute;
+    bottom: 1vw;
+    left: 1vw;
+    margin: 0;
+  } 
+}

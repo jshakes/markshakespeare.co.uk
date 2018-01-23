@@ -1,10 +1,9 @@
 import React from 'react';
-import styles from './header.module.scss';
 import NavItem from './NavItem';
 
 const Nav = () => {
   return (
-    <ul className={styles.nav}>
+    <ul>
       <NavItem to="/">Home</NavItem>
       <NavItem to="/about">About</NavItem>
       <NavItem to="/services">Services</NavItem>

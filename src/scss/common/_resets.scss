@@ -1,0 +1,53 @@
+@mixin reset {
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+}
+
+@mixin reset-ul {
+  @include reset;
+  li {
+    list-style: none;
+  }
+}
+
+@mixin reset-a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@mixin reset-button {
+  @include reset;
+  appearance: none;
+  border: none;
+  background: none;
+  font-family: inherit;
+  outline: 0;
+  cursor: pointer;
+  &[disabled] {
+    opacity: 0.5;
+  }
+}
+
+@mixin reset-text-input {
+  @include reset;
+  background: transparent;
+  font-family: inherit;
+  border: none;
+  color: $color-base;
+  &:focus {
+    outline: none;
+  }
+  &::-webkit-input-placeholder {
+    color: $color-accent-3;
+  }
+  &::-moz-placeholder {
+    color: $color-accent-3;
+  }
+  &:-ms-input-placeholder {
+    color: $color-accent-3;
+  }
+  &:-moz-placeholder {
+    color: $color-accent-3;
+  }
+}

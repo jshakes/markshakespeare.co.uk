@@ -1,10 +1,9 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import styles from './header.module.scss';
 
 const NavItem = props => {
   return (
-    <li className={styles.navItem}>
+    <li>
       <Link to={props.to}>{props.children}</Link>
     </li>
   );  

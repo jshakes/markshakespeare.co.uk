@@ -1,0 +1,14 @@
+.page__title {
+  color: $color-accent-1;
+  font-size: 3em;
+  margin-bottom: 1em;
+  @include larger-than(mobile) {
+    font-size: 4em;
+  }
+}
+
+.page__two-columns {
+  @include larger-than(mobile) {
+    @include columns(2, 4em);
+  }
+}

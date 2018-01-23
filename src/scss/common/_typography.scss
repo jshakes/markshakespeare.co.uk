@@ -1,0 +1,51 @@
+$font-base: 'GT America', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  font-size: $base-font-size-mobile * 1px;
+  font-family: $font-base;
+  color: $color-base;
+  @include larger-than(mobile) {
+    font-size: $base-font-size * 1px;
+  }
+}
+
+pre {
+  display: inline-block;
+  background: #EEE;
+  padding: 0 8px;
+  margin: 0;
+  font-size: $base-font-size;
+  vertical-align: bottom;
+  border-radius: .3em;
+  border: 1px solid #DDD;
+}
+
+a {
+  color: inherit;
+}
+
+p {
+  line-height: 1.666666;
+  font-size: 1em;
+  margin: 0 0 1.5em;
+  a {
+    text-decoration: underline;
+    &:hover {
+      color: darken($color-base, 30%);
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: normal;
+}
