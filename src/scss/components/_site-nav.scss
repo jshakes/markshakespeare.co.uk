@@ -1,33 +1,7 @@
 .site-nav {
-  padding: $height-content-padding-mobile 0;
-  background: url('/images/header-bg.jpg');
-  background-size: cover;
-  margin-bottom: $height-content-padding-mobile;
+  margin: $height-content-padding-mobile 0;
   @include larger-than(mobile) {
-    padding: $height-content-padding 0;
-    margin-bottom: $height-content-padding;
-  }
-}
-
-.site-nav__title {
-  width: 10em;
-  text-decoration: none;
-  display: block;
-  font-size: 1.25em;
-  color: rgba($color-accent-1, 0.5);
-  margin-bottom: 2em;
-  transition: color 0.25s;
-  &:hover {
-    color: rgba($color-accent-1, 1);
-  }
-}
-
-.site-nav__tagline {
-  font-size: 2em;
-  display: block;
-  margin-bottom: 2em;
-  @include larger-than(mobile) {
-    width: 66.666666%;
+    margin: $height-content-padding 0;
   }
 }
 
@@ -49,4 +23,3 @@
     border-bottom: 3px solid $color-accent-1;
   }
 }
-

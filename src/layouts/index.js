@@ -2,6 +2,7 @@ import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
 import Header from '../components/Header';
+import Navigation from '../components/Navigation';
 import { siteMetadata } from '../../gatsby-config';
 
 import '../scss/main.scss';
@@ -19,6 +20,7 @@ export default props => {
       </Helmet>
       <Header />
       <div className="content-wrapper">
+        <Navigation />
         {props.children()}
         <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
       </div>
