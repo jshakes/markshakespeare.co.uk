@@ -1,21 +1,26 @@
 .image-gallery__items {
   @include reset-ul;
-  @include ib-whitespace-fix
+  @include larger-than(mobile) {
+    @include columns(3, 2em);
+  }
 }
 
 .image-gallery__item {
   vertical-align: top;
   position: relative;
   overflow: hidden;
-  margin: 0;
   @include larger-than(mobile) {
     @include aspect-ratio(1, 1);
-    width: 33.333333%;
+    margin: 0 0 2em;
   }
 }
 
 .image-gallery__image {
   object-fit: cover;
+  transition: opacity 0.25s;
+  &:hover {
+    opacity: 0.5;
+  }
   @include larger-than(mobile) {
     position: absolute;
     width: 100%;

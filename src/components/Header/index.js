@@ -7,7 +7,7 @@ const Header = () => {
   return (
     <header>
       <div>
-        <Link to="/">
+        <Link to="/" exact>
           <h2>{siteMetadata.title}</h2>
         </Link>
         <h5>{siteMetadata.description}</h5>

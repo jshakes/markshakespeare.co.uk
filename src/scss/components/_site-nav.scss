@@ -38,7 +38,7 @@
   text-decoration: none;
   padding: 0.5em 0;
   &:hover,
-  .site-nav__item--active & {
+  &.site-nav__link--active {
     border-bottom: 3px solid $color-accent-1;
   }
 }
