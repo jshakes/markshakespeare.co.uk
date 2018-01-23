@@ -19,7 +19,7 @@ export default props => {
       </Helmet>
       <Header />
       {props.children()}
-      <footer>&copy; Mark Shakespeare, {d.getFullYear()}</footer>
+      <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
     </div>
   );
 };
