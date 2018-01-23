@@ -1,8 +1,11 @@
 .site-nav {
-  margin: $height-content-padding-mobile 0;
-  border-bottom: 1px solid $color-border;
+  padding: $height-content-padding-mobile 0;
+  background: url('/images/header-bg.jpg');
+  background-size: cover;
+  margin-bottom: $height-content-padding-mobile;
   @include larger-than(mobile) {
-    margin: $height-content-padding 0;
+    padding: $height-content-padding 0;
+    margin-bottom: $height-content-padding;
   }
 }
 
@@ -30,7 +33,6 @@
 
 .site-nav__items {
   @include reset-ul;
-  margin: 4em 0;
 }
 
 .site-nav__item {

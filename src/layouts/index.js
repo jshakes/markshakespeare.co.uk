@@ -10,7 +10,7 @@ const d = new Date();
 
 export default props => {
   return (
-    <div className="content-wrapper">
+    <div>
       <Helmet>
         <meta charSet="utf-8" />
         <title>{ siteMetadata.title }</title>
@@ -18,8 +18,10 @@ export default props => {
         <link rel="author" href={siteMetadata.author} />
       </Helmet>
       <Header />
-      {props.children()}
-      <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
+      <div className="content-wrapper">
+        {props.children()}
+        <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
+      </div>
     </div>
   );
 };
