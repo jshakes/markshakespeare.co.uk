@@ -74,12 +74,11 @@ class ImageGrid extends Component {
   
   renderGallery() {
     return images.map((image, index) => {
-      return <img src={image.src} onClick={() => this.openLightbox(index)} />;
+      return <img key={index} src={image.src} onClick={() => this.openLightbox(index)} />;
     });
   }
   
   render() {
-    console.log(Lightbox);
     return (
       <div>
         {this.renderGallery()}
