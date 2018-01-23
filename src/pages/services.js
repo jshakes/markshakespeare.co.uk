@@ -2,7 +2,6 @@ import React from 'react';
 import Page from '../components/Page';
 
 const ServicesPage = props => {
-  console.log(props);
   return (
     <Page title="Services">
       <p>I am available to hire for freelance art therapy services including:</p>

@@ -9,7 +9,6 @@ import '../scss/main.scss';
 const d = new Date();
 
 export default props => {
-  console.log(props);
   return (
     <div>
       <Helmet>

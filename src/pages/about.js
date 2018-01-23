@@ -2,7 +2,6 @@ import React from 'react';
 import Page from '../components/Page';
 
 const AboutPage = props => {
-  console.log(props);
   return (
     <Page title="About">
       <p>Mark studied Fine Art at Sheffield University before going on to train as an art therapist in 1985. He has since worked in the NHS providing an art therapy service for people with learning disabilities in Surrey. He retired from his role as Lead Consultant Art Therapist with Surrey & Borders Partnership NHS FT in 2015.</p>
