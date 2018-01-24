@@ -10,3 +10,16 @@ img {
 a {
   color: inherit;
 }
+
+hr {
+  border: none;
+  text-align: center;
+  font-size: 4em;
+  color: rgba(0, 0, 0, 0.4);
+  margin: 2rem 0;
+  height: auto;
+  &:before {
+    content: "\2619";
+    display: block;
+  }
+}
