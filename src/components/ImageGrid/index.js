@@ -47,6 +47,11 @@ class ImageGrid extends Component {
     currentImage: 0
   }
   
+  componentWillMount() {
+    const limit = this.props.limit;
+    this.setState({ images: limit ? images.slice(0, limit) : images });
+  }
+  
   openLightbox(image = 0) {
     this.setState({
       lightboxIsOpen: true,
@@ -75,7 +80,7 @@ class ImageGrid extends Component {
   renderGallery() {
     return (
       <ul className="image-gallery__items">
-        {images.map(this.renderGalleryItem.bind(this))}
+        {this.state.images.map(this.renderGalleryItem.bind(this))}
       </ul>
     );
   }
@@ -93,7 +98,7 @@ class ImageGrid extends Component {
       <div className="image-gallery">
         {this.renderGallery()}
         <Lightbox
-          images={images}
+          images={this.state.images}
           onClose={this.closeLightbox.bind(this)}
           isOpen={this.state.lightboxIsOpen}
           currentImage={this.state.currentImage}
