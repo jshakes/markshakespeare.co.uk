@@ -1,4 +1,7 @@
-$font-base: Georgia, serif;
+@import url('https://fonts.googleapis.com/css?family=Josefin+Sans|PT+Sans|PT+Serif');
+
+$font-base: 'PT Sans', sans-serif;
+$font-display: 'PT Serif', Georgia, serif;
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -48,6 +51,7 @@ h4,
 h5,
 h6 {
   font-weight: normal;
+  font-family: $font-display;
 }
 
 blockquote {

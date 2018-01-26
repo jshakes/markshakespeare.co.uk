@@ -10,6 +10,7 @@ import '../scss/main.scss';
 const d = new Date();
 
 export default props => {
+  const isHome = props.location.pathname === '/';
   return (
     <div>
       <Helmet>
@@ -18,7 +19,7 @@ export default props => {
         <link rel="canonical" href={siteMetadata.siteUrl} />
         <link rel="author" href={siteMetadata.author} />
       </Helmet>
-      <Header />
+      <Header isHome={isHome} />
       <div className="content-wrapper">
         <Navigation />
         {props.children()}
