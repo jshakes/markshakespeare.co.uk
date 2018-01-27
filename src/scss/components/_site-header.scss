@@ -2,6 +2,7 @@
   padding: $height-content-padding-mobile 0;
   margin-bottom: $height-content-padding-mobile;
   position: relative;
+  background-color: #ECF2F6;
   .gatsby-image-outer-wrapper {
     position: static !important; 
   }
@@ -17,6 +18,7 @@
 .site-header__content {
   @extend .content-wrapper;
   z-index: 2;
+  background: none;
 }
 
 .site-header__title {

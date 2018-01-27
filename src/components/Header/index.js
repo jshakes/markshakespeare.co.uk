@@ -4,7 +4,6 @@ import BgImage from '../BgImage';
 import { siteMetadata } from '../../../gatsby-config';
 
 const Header = ({ isHome, headerImage }) => {
-  console.log(headerImage);
   let content;
   
   if (isHome) {
