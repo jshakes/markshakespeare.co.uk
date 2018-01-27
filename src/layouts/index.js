@@ -11,6 +11,7 @@ const d = new Date();
 
 export default props => {
   const isHome = props.location.pathname === '/';
+  console.log(props);
   return (
     <div>
       <Helmet>
@@ -19,7 +20,7 @@ export default props => {
         <link rel="canonical" href={siteMetadata.siteUrl} />
         <link rel="author" href={siteMetadata.author} />
       </Helmet>
-      <Header isHome={isHome} />
+      <Header isHome={isHome} headerImage={props.data.headerImage} />
       <div className="content-wrapper">
         <Navigation />
         {props.children()}
@@ -28,3 +29,13 @@ export default props => {
     </div>
   );
 };
+
+export const pageQuery = graphql`
+  query HeaderImageQuery {
+    headerImage: imageSharp(id: { regex: "/header-bg/" }) {
+      sizes(maxWidth: 1280 ) {
+        ...GatsbyImageSharpSizes
+      }
+    }
+  }
+`;

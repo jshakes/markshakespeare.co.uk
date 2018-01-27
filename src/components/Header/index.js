@@ -1,9 +1,10 @@
 import React from 'react';
 import Link from 'gatsby-link';
+import BgImage from '../BgImage';
 import { siteMetadata } from '../../../gatsby-config';
 
-const Header = props => {
-  const { isHome } = props;
+const Header = ({ isHome, headerImage }) => {
+  console.log(headerImage);
   let content;
   
   if (isHome) {
@@ -15,11 +16,13 @@ const Header = props => {
   
   return (
     <header className={isHome ? 'site-header--home' : 'site-header'}>
-      <div className="content-wrapper" style={{ background: 'none' }}>
+      <div className="site-header__content">
         {content}
       </div>
+      <BgImage sizes={headerImage.sizes} />
     </header>
   );  
 };
 
 export default Header;
+

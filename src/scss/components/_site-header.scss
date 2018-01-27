@@ -1,9 +1,10 @@
 .site-header {
   padding: $height-content-padding-mobile 0;
-  background: url('/images/header-bg.jpg');
-  background-size: 100%;
   margin-bottom: $height-content-padding-mobile;
-  background-attachment: fixed;
+  position: relative;
+  .gatsby-image-outer-wrapper {
+    position: static !important; 
+  }
 }
 
 .site-header--home {
@@ -11,6 +12,11 @@
   @include larger-than(mobile) {
     padding: 5em 0 6em;
   }
+}
+
+.site-header__content {
+  @extend .content-wrapper;
+  z-index: 2;
 }
 
 .site-header__title {
