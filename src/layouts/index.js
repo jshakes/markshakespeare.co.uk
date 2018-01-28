@@ -11,7 +11,6 @@ const d = new Date();
 
 export default props => {
   const isHome = props.location.pathname === '/';
-  console.log(props);
   return (
     <div>
       <Helmet>

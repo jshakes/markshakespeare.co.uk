@@ -9,25 +9,17 @@
   vertical-align: top;
   position: relative;
   overflow: hidden;
-  @include larger-than(mobile) {
-    @include aspect-ratio(1, 1);
-    margin: 0 0 2em;
-  }
+  margin: 0 0 2em;
 }
 
 .image-gallery__image {
-  object-fit: cover;
   transition: opacity 0.25s;
   cursor: pointer;
+  width: 100% !important;
+  height: 100% !important;
+  padding-bottom: 100%;
   &:hover {
     opacity: 0.5;
-  }
-  @include larger-than(mobile) {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    left: 0;
-    top: 0;
   }
 }
 

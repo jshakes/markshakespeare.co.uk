@@ -1,44 +1,6 @@
 import React, { Component } from 'react';
 import Lightbox from 'react-images';
-
-const images = [
-  {
-    src: '/images/artwork/1.jpg'
-  },
-  {
-    src: '/images/artwork/2.jpg'
-  },
-  {
-    src: '/images/artwork/3.jpg'
-  },
-  {
-    src: '/images/artwork/4.jpg'
-  },
-  {
-    src: '/images/artwork/5.jpg'
-  },
-  {
-    src: '/images/artwork/6.jpg'
-  },
-  {
-    src: '/images/artwork/7.jpg'
-  },
-  {
-    src: '/images/artwork/8.jpg'
-  },
-  {
-    src: '/images/artwork/9.jpg'
-  },
-  {
-    src: '/images/artwork/10.jpg'
-  },
-  {
-    src: '/images/artwork/11.jpg'
-  },
-  {
-    src: '/images/artwork/12.jpg'
-  }
-];
+import Img from 'gatsby-image';
 
 class ImageGrid extends Component {
   
@@ -46,12 +8,7 @@ class ImageGrid extends Component {
     lightboxIsOpen: false,
     currentImage: 0
   }
-  
-  componentWillMount() {
-    const limit = this.props.limit;
-    this.setState({ images: limit ? images.slice(0, limit) : images });
-  }
-  
+    
   openLightbox(image = 0) {
     this.setState({
       lightboxIsOpen: true,
@@ -78,9 +35,10 @@ class ImageGrid extends Component {
   }
   
   renderGallery() {
+    const { images } = this.props;
     return (
       <ul className="image-gallery__items">
-        {this.state.images.map(this.renderGalleryItem.bind(this))}
+        {images.map(this.renderGalleryItem.bind(this))}
       </ul>
     );
   }
@@ -88,17 +46,18 @@ class ImageGrid extends Component {
   renderGalleryItem(image, index) {
     return (
       <li className="image-gallery__item" key={index}>
-        <img src={image.src} onClick={() => this.openLightbox(index)} className="image-gallery__image" />
+        <Img resolutions={image.thumbnail} onClick={() => this.openLightbox(index)} className="image-gallery__image" />
       </li>
     );
   }
   
   render() {
+    const largeImages = this.props.images.map(image => { src: image.large.src });
     return (
       <div className="image-gallery">
         {this.renderGallery()}
         <Lightbox
-          images={this.state.images}
+          images={largeImages}
           onClose={this.closeLightbox.bind(this)}
           isOpen={this.state.lightboxIsOpen}
           currentImage={this.state.currentImage}
