@@ -45,14 +45,14 @@ class ImageGrid extends Component {
   
   renderGalleryItem(image, index) {
     return (
-      <li className="image-gallery__item" key={index}>
-        <Img resolutions={image.thumbnail} onClick={() => this.openLightbox(index)} className="image-gallery__image" />
+      <li className="image-gallery__item" key={index} onClick={() => this.openLightbox(index)}>
+        <Img resolutions={image.thumbnail} className="image-gallery__image" />
       </li>
     );
   }
   
   render() {
-    const largeImages = this.props.images.map(image => { src: image.large.src });
+    const largeImages = this.props.images.map(image => { return { src: image.large.src }});
     return (
       <div className="image-gallery">
         {this.renderGallery()}

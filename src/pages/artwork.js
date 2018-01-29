@@ -59,7 +59,7 @@ query ImagesQuery {
     edges {
       node {
         childImageSharp {
-          thumbnail: resolutions(width: 364) {
+          thumbnail: resolutions(width: 364, height: 364) {
             ...GatsbyImageSharpResolutions
           }
           large: resolutions(width: 1280) {

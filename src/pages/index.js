@@ -15,7 +15,6 @@ const IndexPage = () => (
     </div>
     <hr />
     <p>Mark also continues to paint and draw. A small selection of his work can be found below.</p>
-    <ImageGrid limit={3} />
     <Link className="cta" to="/artwork">See more</Link>
   </div>
 );
