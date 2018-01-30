@@ -17,9 +17,9 @@ export default ({ data, location, children }) => {
       <Helmet>
         <meta charSet="utf-8" />
         <title>{ siteMetadata.title }</title>
+        <meta name="author" content={siteMetadata.author} />
+        <meta name="description" content={siteMetadata.description} />        
         <link rel="canonical" href={siteMetadata.siteUrl} />
-        <link rel="author" href={siteMetadata.author} />
-        
         <meta property="og:title" content={siteMetadata.title} />
         <meta property="og:description" content={siteMetadata.description} />
         <meta property="og:image" content={`${siteMetadata.siteUrl}${data.ogImage.resize.src}`} />
