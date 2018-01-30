@@ -9,8 +9,9 @@ import '../scss/main.scss';
 
 const d = new Date();
 
-export default props => {
-  const isHome = props.location.pathname === '/';
+export default ({ data, location, children }) => {
+  const isHome = location.pathname === '/';
+  console.log(data.ogImage);
   return (
     <div>
       <Helmet>
@@ -18,11 +19,18 @@ export default props => {
         <title>{ siteMetadata.title }</title>
         <link rel="canonical" href={siteMetadata.siteUrl} />
         <link rel="author" href={siteMetadata.author} />
+        
+        <meta property="og:title" content={siteMetadata.title} />
+        <meta property="og:description" content={siteMetadata.description} />
+        <meta property="og:image" content={`${siteMetadata.siteUrl}${data.ogImage.resize.src}`} />
+        <meta property="og:site_name" content={siteMetadata.title} />
+        <meta property="og:url" content={siteMetadata.siteUrl} />
+        <meta property="og:locale" content={siteMetadata.locale} />
       </Helmet>
-      <Header isHome={isHome} headerImage={props.data.headerImage} />
+      <Header isHome={isHome} headerImage={data.headerImage} />
       <div className="content-wrapper">
         <Navigation />
-        {props.children()}
+        {children()}
         <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
       </div>
     </div>
@@ -30,10 +38,15 @@ export default props => {
 };
 
 export const pageQuery = graphql`
-  query HeaderImageQuery {
+  query LayoutImages {
     headerImage: imageSharp(id: { regex: "/header-bg/" }) {
       sizes(maxWidth: 1280 ) {
         ...GatsbyImageSharpSizes
+      }
+    }
+    ogImage: imageSharp(id: { regex: "/artwork/1/" }) {
+      resize(width: 1280) {
+        src
       }
     }
   }

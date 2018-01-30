@@ -39,7 +39,7 @@ export const pageQuery = graphql`
       sizes(maxWidth: 560) {
         ...GatsbyImageSharpSizes
       }
-    },
+    }
     paintingImage: imageSharp(id: { regex: "/artwork/1/" }) {
       sizes(maxWidth: 560) {
         ...GatsbyImageSharpSizes
