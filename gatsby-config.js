@@ -15,10 +15,28 @@ module.exports = {
       },
     },    
     {
-      resolve: `gatsby-source-filesystem`,
+      resolve: 'gatsby-source-filesystem',
       options: {
-        name: `img`,
+        name: 'img',
         path: `${__dirname}/src/img/`
+      }
+    }, 
+    {
+      resolve: 'gatsby-plugin-favicon',
+      options: {
+        logo: './src/img/favicon.png',
+        injectHTML: true,
+        icons: {
+          android: true,
+          appleIcon: true,
+          appleStartup: true,
+          coast: false,
+          favicons: true,
+          firefox: true,
+          twitter: false,
+          yandex: false,
+          windows: false
+        }
       }
     },
     'gatsby-plugin-react-helmet',
