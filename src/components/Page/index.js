@@ -2,16 +2,14 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import { siteMetadata } from '../../../gatsby-config';
 
-const Page = ({ title, children }) => {
-  return (
-    <div className="page">
-      <Helmet>
-        <title>{title} - {siteMetadata.title}</title>
-      </Helmet>
-      <h1 className="page__title">{title}</h1>
-      {children}
-    </div>
-  );  
-};
+const Page = ({ title, children }) => (
+  <div className="page">
+    <Helmet>
+      <title>{title} - {siteMetadata.title}</title>
+    </Helmet>
+    <h1 className="page__title">{title}</h1>
+    {children}
+  </div>
+);
 
 export default Page;
