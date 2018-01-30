@@ -65,7 +65,7 @@ blockquote {
 
 blockquote:before {
   color: $color-feint;
-  content: open-quote;
+  content: "\201C";
   font-size: 6em;
   position: absolute;
   left: 0;
