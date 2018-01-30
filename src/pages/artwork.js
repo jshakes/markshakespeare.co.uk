@@ -54,7 +54,7 @@ const ArtworkPage = ({ data }) => {
 export default ArtworkPage;
 
 export const pageQuery = graphql`
-query ImagesQuery {
+query ArtworkPageImages {
   allFile(filter: {id: {regex: "/img/artwork/"}}) {
     edges {
       node {

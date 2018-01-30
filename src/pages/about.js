@@ -23,7 +23,7 @@ const AboutPage = ({ data }) => (
 export default AboutPage;
 
 export const pageQuery = graphql`
-  query ProfileImage {
+  query AboutPageImages {
     profileImage: imageSharp(id: { regex: "/profile/" }) {
       sizes(maxWidth: 560) {
         ...GatsbyImageSharpSizes
