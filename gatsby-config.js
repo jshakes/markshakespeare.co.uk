@@ -21,7 +21,13 @@ module.exports = {
         name: 'img',
         path: `${__dirname}/src/img/`
       }
-    }, 
+    },
+    {
+      resolve: `gatsby-plugin-google-fonts`,
+      options: {
+        fonts: [`PT Sans`, `PT Serif`]
+      }
+    },
     {
       resolve: 'gatsby-plugin-favicon',
       options: {
