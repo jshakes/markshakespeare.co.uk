@@ -7,7 +7,7 @@ const Header = ({ isHome, headerImage }) => {
   let content;
   
   if (isHome) {
-    content = <span className="site-header__tagline"><Link to="/" exact className="site-header__title">{siteMetadata.title}</Link> is a freelance art therapist and artist based in Dorking, Surrey.</span>;
+    content = <span className="site-header__tagline"><Link to="/" exact className="site-header__title">{siteMetadata.title}</Link> is a freelance art therapist and artist based in Surrey.</span>;
   }
   else {
     content = <span className="site-header__tagline"><Link to="/" exact className="site-header__title">{siteMetadata.title}</Link></span>;
