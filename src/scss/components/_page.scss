@@ -2,31 +2,6 @@
   position: relative;
 }
 
-.page--with-key-image {
-  @extend .page;
-  @include larger-than(tablet) {
-    padding-left: 40%;
-  }  
-}
-
-.page__key-image {
-  float: left;
-  width: 40%;
-  margin: 0 1.5em 1em 0;
-  @include larger-than(mobile) {
-    margin: 0 2em 1em 0;
-    width: 33.333333%;
-  }
-  @include larger-than(tablet) {
-    float: none;
-    margin: 0;
-    position: absolute;
-    width: calc(40% - 2em);
-    left: 0;
-    top: 0;
-  }
-}
-
 .page__title {
   color: $color-accent-1;
   font-size: 3em;

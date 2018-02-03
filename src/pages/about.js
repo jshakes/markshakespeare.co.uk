@@ -4,8 +4,8 @@ import Page from '../components/Page';
 
 const AboutPage = ({ data }) => (
   <Page title="About">
-    <div className="page--with-key-image">
-      <div className="page__key-image">
+    <div className="about-page">
+      <div className="about-page__key-image">
         <Img sizes={data.profileImage.sizes} alt="A photo of Mark Shakespeare" />
       </div>
       <p>Mark studied Fine Art at Sheffield University before going on to train as an art therapist in 1985. He has since worked in the NHS providing an art therapy service for people with learning disabilities in Surrey. He retired from his role as Lead Consultant Art Therapist with Surrey & Borders Partnership NHS FT in 2015.</p>
