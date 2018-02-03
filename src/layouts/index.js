@@ -39,8 +39,8 @@ export default ({ data, location, children }) => {
 export const pageQuery = graphql`
   query LayoutImages {
     headerImage: imageSharp(id: { regex: "/header-bg/" }) {
-      sizes(maxWidth: 1280 ) {
-        ...GatsbyImageSharpSizes
+      sizes(maxWidth: 1440 ) {
+        ...GatsbyImageSharpSizes_noBase64
       }
     }
     ogImage: imageSharp(id: { regex: "/artwork/1/" }) {
