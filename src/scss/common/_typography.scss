@@ -79,11 +79,15 @@ blockquote:before {
   border-radius: 0.125em;
   transition: background-color 0.25s;
   &:after {
-    content: "\2192";
+    content: "\25B6";
     display: inline-block;
-    margin-left: 0.5em;
+    margin-left: 1em;
+    font-size: 0.666666em;
   }
   &:hover {
     background: rgba($color-accent-1, 0.75);
+    border-bottom: 0.2em solid $color-accent-1;
+    margin-top: -0.2em;
+    color: white;
   }
 }
