@@ -2,11 +2,30 @@ import React, { Component } from 'react';
 import Lightbox from 'react-images';
 import Img from 'gatsby-image';
 
+const PERMALINK_PREFIX = 'gallery-image-';
+
 class ImageGrid extends Component {
   
   state = {
     lightboxIsOpen: false,
     currentImage: 0
+  }
+  
+  componentDidMount() {
+    if(window.location.hash.indexOf(PERMALINK_PREFIX) > -1) {
+      this.openPermalink();
+    }
+  }
+  
+  componentDidUpdate() {
+    const { currentImage } = this.state;
+    window.location.hash = PERMALINK_PREFIX + (currentImage + 1);
+  }
+  
+  openPermalink() {
+    const hashArr = window.location.hash.split(PERMALINK_PREFIX);
+    const item = parseInt(hashArr[1]);
+    this.openLightbox(item - 1);
   }
     
   openLightbox(image = 0) {
@@ -19,6 +38,8 @@ class ImageGrid extends Component {
   closeLightbox() {
     this.setState({
       lightboxIsOpen: false      
+    }, () => {
+      window.location.hash = '';
     });
   }
   
