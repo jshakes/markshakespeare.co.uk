@@ -52,7 +52,7 @@ class ImageGrid extends Component {
   }
   
   render() {
-    const largeImages = this.props.images.map(image => { return { src: image.large.src }});
+    const largeImages = this.props.images.map(image => image.large);
     return (
       <div className="image-gallery">
         {this.renderGallery()}

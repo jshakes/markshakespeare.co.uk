@@ -2,47 +2,35 @@ import React from 'react';
 import ImageGrid from '../components/ImageGrid';
 import Page from '../components/Page';
 
-const images = [
-  {
-    src: 'artwork/1.jpg'
-  },
-  {
-    src: 'artwork/2.jpg'
-  },
-  {
-    src: 'artwork/3.jpg'
-  },
-  {
-    src: 'artwork/4.jpg'
-  },
-  {
-    src: 'artwork/5.jpg'
-  },
-  {
-    src: 'artwork/6.jpg'
-  },
-  {
-    src: 'artwork/7.jpg'
-  },
-  {
-    src: 'artwork/8.jpg'
-  },
-  {
-    src: 'artwork/9.jpg'
-  },
-  {
-    src: 'artwork/10.jpg'
-  },
-  {
-    src: 'artwork/11.jpg'
-  },
-  {
-    src: 'artwork/12.jpg'
-  }
+// Captions in order of source filename alphabetical from /src/images/artwork
+const captions = [
+  'Acrylic on Canvas, 2016',
+  'Charcoal, 2016',
+  'Oil pastel, 2013',
+  'Acrylic on Canvas, 2016',
+  'Acrylic on Canvas, 2016',
+  'Acrylic on Canvas, 2016',
+  'Charcoal, 2016',
+  'Acrylic on Canvas, 2016',
+  'Acrylic on Canvas, 2016',
+  'Acrylic on Canvas, 2016',
+  'Oil pastel, 2013',
+  'Charcoal, 2016',
 ];
 
 const ArtworkPage = ({ data }) => {
-  const images = data.allFile.edges.map(edge => edge.node.childImageSharp);
+  const images = data.allFile.edges.map(({ node }, index) => {
+    const { thumbnail, large } = node.childImageSharp;
+    return {
+      thumbnail,
+      large: { 
+        ...large,
+        caption: captions[index],
+        srcSet: large.srcSet.split(',')
+      }
+    };
+  });
+  console.log(images);
   return (
     <Page title="Artwork">
       <p>Mark continues to paint and draw. A small selection of his artwork can be found below. For sales enquiries, please email markjshakespeare@gmail.com.</p>
@@ -60,10 +48,10 @@ query ArtworkPageImages {
       node {
         childImageSharp {
           thumbnail: resolutions(width: 364, height: 364) {
-            ...GatsbyImageSharpResolutions
+            ...GatsbyImageSharpResolutions_noBase64
           }
-          large: resolutions(width: 1280) {
-            ...GatsbyImageSharpResolutions
+          large: sizes(maxWidth: 1280) {
+            ...GatsbyImageSharpSizes_noBase64
           }
         }
       }

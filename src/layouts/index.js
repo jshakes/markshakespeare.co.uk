@@ -11,7 +11,6 @@ const d = new Date();
 
 export default ({ data, location, children }) => {
   const isHome = location.pathname === '/';
-  console.log(data.ogImage);
   return (
     <div>
       <Helmet>
