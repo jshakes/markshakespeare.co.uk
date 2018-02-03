@@ -1,0 +1,40 @@
+.home-page__module {
+  margin-bottom: 4em;
+  @include larger-than(mobile) {
+    @include columns(2, 4em);
+  }
+}
+
+.home-page__copy-container {
+  margin-bottom: 2em;
+  @include larger-than(mobile) {
+    margin-bottom: 0;
+  }
+  .cta {
+    display: none;
+    @include larger-than(mobile) {
+      display: inline-block;
+    }
+  }
+}
+
+.home-page__image-container {
+  position: relative;
+  border-bottom: 0.5em solid #1ca086;
+  @include larger-than(mobile) {
+    border-bottom: none;
+  }
+  .cta {
+    @include absolute-center;
+    display: block;
+    @include larger-than(mobile) {
+      display: none;
+    }
+  }
+  img {
+    filter: opacity(0.75);
+    @include larger-than(mobile) {
+      filter: opacity(1);
+    }
+  }
+}
