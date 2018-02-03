@@ -1,5 +1,5 @@
 .site-nav {
-  margin: $height-content-padding-mobile 0;
+  margin: $height-content-padding-mobile 0 4em;
   @include larger-than(mobile) {
     margin: $height-content-padding 0;
   }
