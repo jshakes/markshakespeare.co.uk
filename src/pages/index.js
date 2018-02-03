@@ -22,6 +22,7 @@ const IndexPage = ({ data }) => (
     <div className="home-page__module">
       <div className="home-page__copy-container">
         <p>Mark also continues to paint and draw. A small selection of his work can be found on this site, some of which is for sale.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non aliquam turpis. Nam non eleifend lorem. Proin finibus feugiat velit, quis dignissim diam efficitur eget. Nam ullamcorper ligula at elit tempus dapibus.</p>
         <Link className="cta" to="/artwork">See artwork</Link>
       </div>
       <div className="home-page__image-container">
