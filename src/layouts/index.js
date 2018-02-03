@@ -25,6 +25,7 @@ export default ({ data, location, children }) => {
         <meta property="og:site_name" content={siteMetadata.title} />
         <meta property="og:url" content={siteMetadata.siteUrl} />
         <meta property="og:locale" content={siteMetadata.locale} />
+        <meta name="twitter:card" content="summary" />
       </Helmet>
       <Header isHome={isHome} headerImage={data.headerImage} />
       <div className="content-wrapper">
