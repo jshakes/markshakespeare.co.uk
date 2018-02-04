@@ -14,7 +14,8 @@ export default ({ data, location, children }) => {
   WebFont.load({
     google: {
       families: [`PT Sans`, `PT Serif`]
-    }
+    },
+    async: true
   });
   const isHome = location.pathname === '/';
   return (
