@@ -10,13 +10,13 @@ import '../scss/main.scss';
 
 const d = new Date();
 
+WebFont.load({
+  google: {
+    families: ['PT Sans', 'PT Serif']
+  }
+});
+
 export default ({ data, location, children }) => {
-  WebFont.load({
-    google: {
-      families: [`PT Sans`, `PT Serif`]
-    },
-    async: true
-  });
   const isHome = location.pathname === '/';
   return (
     <div>
