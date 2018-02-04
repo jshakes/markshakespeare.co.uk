@@ -23,12 +23,6 @@ module.exports = {
       }
     },
     {
-      resolve: `gatsby-plugin-google-fonts`,
-      options: {
-        fonts: [`PT Sans`, `PT Serif`]
-      }
-    },
-    {
       resolve: 'gatsby-plugin-favicon',
       options: {
         logo: './src/img/favicon.png',

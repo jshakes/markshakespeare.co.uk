@@ -3,13 +3,13 @@
   "version": "1.0.0",
   "author": "James Shakespeare <j@jshakespeare.com>",
   "homepage": "https://markshakespeare.co.uk",
+  "repository": "https://github.com/jshakes/markshakespeare.co.uk",
   "dependencies": {
     "gatsby": "^1.9.158",
     "gatsby-image": "^1.0.34",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-favicon": "^2.1.1",
     "gatsby-plugin-google-analytics": "^1.0.15",
-    "gatsby-plugin-google-fonts": "0.0.3",
     "gatsby-plugin-netlify": "^1.0.14",
     "gatsby-plugin-react-helmet": "^2.0.3",
     "gatsby-plugin-sass": "^1.0.15",
@@ -21,7 +21,8 @@
     "object-fit-images": "^3.2.3",
     "react-helmet": "^5.2.0",
     "react-images": "^0.5.14",
-    "styled-components": "^3.0.2"
+    "styled-components": "^3.0.2",
+    "webfontloader": "^1.6.28"
   },
   "keywords": [
     "gatsby"

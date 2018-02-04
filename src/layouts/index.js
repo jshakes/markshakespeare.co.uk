@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
+import WebFont from 'webfontloader';
 import Header from '../components/Header';
 import Navigation from '../components/Navigation';
 import { siteMetadata } from '../../gatsby-config';
@@ -10,6 +11,11 @@ import '../scss/main.scss';
 const d = new Date();
 
 export default ({ data, location, children }) => {
+  WebFont.load({
+    google: {
+      families: [`PT Sans`, `PT Serif`]
+    }
+  });
   const isHome = location.pathname === '/';
   return (
     <div>
