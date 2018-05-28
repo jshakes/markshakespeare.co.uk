@@ -2,7 +2,7 @@ import React from 'react';
 import ImageGrid from '../components/ImageGrid';
 import Page from '../components/Page';
 
-// Captions in order of source filename alphabetical from /src/images/artwork
+// Captions in order of source filename alphabetical from /src/img/artwork
 const captions = [
   'Acrylic on Canvas, 2016',
   'Charcoal, 2016',
@@ -16,6 +16,13 @@ const captions = [
   'Acrylic on Canvas, 2016',
   'Oil pastel, 2013',
   'Charcoal, 2016',
+  'Untitled',
+  'Untitled',
+  'Untitled',
+  'Untitled',
+  'Untitled',
+  'Untitled',
+  'Untitled',
 ];
 
 const ArtworkPage = ({ data }) => {
@@ -23,7 +30,7 @@ const ArtworkPage = ({ data }) => {
     const { thumbnail, large } = node.childImageSharp;
     return {
       thumbnail,
-      large: { 
+      large: {
         ...large,
         caption: captions[index],
         srcSet: large.srcSet.split(',')
