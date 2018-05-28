@@ -3,20 +3,30 @@ import Page from '../components/Page';
 
 const ServicesPage = () => (
   <Page title="Services">
-    <p>This page will describe in more detail the services that Mark offers, as well as testimonials from clients.</p>
     <h2>Individual Therapy</h2>
-    <p>Aenean id viverra ex. Etiam id elit consequat, pellentesque arcu sed, scelerisque ligula. Duis bibendum suscipit dolor, sed consequat neque ultricies eget. Praesent efficitur velit non venenatis sollicitudin. Fusce pharetra facilisis elit vel eleifend. Nullam eu mattis felis, sit amet tempus urna. Curabitur ligula metus, condimentum vitae accumsan id, lobortis in nisl. Donec imperdiet elit at magna faucibus imperdiet. Duis placerat facilisis massa et pellentesque. Proin rhoncus vulputate risus, eget feugiat elit consectetur et. Sed metus justo, commodo ut orci et, mollis interdum lectus.</p>
+    <p>These sessions allow clients to:</p>
+    <ul>
+      <li>Develop imagination using a range of art materials</li>
+      <li>Explore the meaning of past and present experiences</li>
+      <li>Gain and build confidence and inspiration</li>
+      <li>Find creative ways of gaining insight and self-knowledge</li>
+      <li>Experience the health and creative benefits of self-expression with the support of an experienced and trained therapist</li>
+      <li>Enjoy using art materials and create a portfolio of your personal images and objects</li>
+    </ul>    
+    <p>Artistic skills are not a requirement to benefit from Art Therapy. Most of us make marks, scribbles, doodles and images during our lives.  Art Therapy enables this and further mark-making to be accessible to those who wish to discover and work with their own ideas and emotions in a constructive way.</p>
     <h2>Group Workshops</h2>
-    <p>Ut tristique vitae nisi id porta. Nunc mattis eu metus tincidunt rhoncus. Nunc in nisi vitae nibh suscipit eleifend eu nec orci. Sed rutrum consequat orci, nec pretium odio rhoncus vel.</p>
-    <blockquote>Learning about the art and to have a thoughtful presenter who took time to go round each table and discuss with individual Recoverers what they were doing.</blockquote>
-    <p>-Stroke recovery workshop</p>
-    <h2>Talks and Conferences</h2>
-    <p>Nullam pretium justo vel lacus lobortis ultrices. Curabitur sit amet dolor ligula. Donec id felis at turpis fermentum faucibus viverra ut tellus. Donec gravida, lectus vitae cursus venenatis, dolor urna varius neque, nec egestas tortor mauris at dui. Suspendisse potenti.</p>
-    <blockquote>Phasellus eu mauris nibh. Nunc posuere nunc at quam efficitur mattis. Curabitur id leo ac leo interdum semper a accumsan sem. Integer in risus at nibh porttitor laoreet. Etiam vel hendrerit urna, quis imperdiet eros.</blockquote>
-    <p>-Suspendisse potenti</p>
-    <p>
-      <a className="cta" href="#">Email Mark for more information</a>
-    </p>
+    <p>Working with others in a group can provide further benefits including:</p>
+    <ul>
+      <li>Support and encouragement from peers</li>
+      <li>A sense of unity and common purpose</li>
+      <li>Sharing ideas and experiences</li>
+      <li>Creative stimulation</li>
+      <li>A safe and supportive environment to explore issues</li>
+    </ul>
+    <p>Workshops will often be more structured and focussed on addressing the needs of the group, helping individuals to find their own creative expression and to build confidence in relationships and with oneself.</p>
+    <p>An art therapist goes through rigorous training and is present to assure clients that the work is confidential, and an appropriate agreement is made between the therapist and client as to the nature of that confidentiality.</p>
+    <p>Whether provided in groups or individually Art Therapy is not a recreational activity or an art lesson, although the sessions can be enjoyable. Clients do not need to have any previous experience or expertise in art.</p>
+    <p><a className="cta" href="#">Email Mark for more information</a></p>
   </Page>
 );
 
