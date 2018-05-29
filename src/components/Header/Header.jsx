@@ -1,6 +1,7 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import BgImage from '../BgImage/BgImage';
+import logo from '../../img/logo-small.svg';
 import { siteMetadata } from '../../../gatsby-config';
 
 const Header = ({ isHome, headerImage }) => {
@@ -24,7 +25,15 @@ const Header = ({ isHome, headerImage }) => {
   return (
     <header className={isHome ? 'site-header--home' : 'site-header'}>
       <div className="site-header__content">
-        {content}
+        <Link to="/" exact className="site-header__title">
+          <img src={logo} alt="Mark Shakespeare" className="site-header__logo" />
+        </Link>
+        {
+          isHome && 
+          <span className="site-header__tagline">
+            <Link to="/" exact className="site-header__title">{siteMetadata.title}</Link> is a freelance art therapist and artist based in Surrey.
+          </span>
+        }
       </div>
       <BgImage sizes={headerImage.sizes} />
     </header>

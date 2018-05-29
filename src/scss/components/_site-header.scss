@@ -10,21 +10,40 @@
 
 .site-header--home {
   @extend .site-header;
+    
   @include larger-than(mobile) {
     padding: 5em 0 6em;
+  }
+  
+  .site-header__logo {
+    width: 100px;
+    margin-bottom: 2em;
+    
+    @include larger-than(mobile) {
+      width: 200px;
+      margin-right: 5em;
+      margin-bottom: 0;
+    }
   }
 }
 
 .site-header__content {
   @extend .content-wrapper;
+
   z-index: 2;
   background: none;
+   
+  @include larger-than(mobile) {
+    display: flex;
+    align-items: center;
+  }
 }
 
 .site-header__title {
   text-decoration: none;
   color: rgba($color-accent-1, 1);
   transition: color 0.25s;
+
   &:hover {
     color: rgba($color-accent-1, 0.5);
   }
@@ -35,12 +54,15 @@
   display: block;
   line-height: 1.5;
   font-family: $font-display;
+  
   @include larger-than(mobile) {
     width: 66.666666%;
     font-size: 1.5em;
   }
+  
   .site-header--home & {
     font-size: 1.75em;
+    
     @include larger-than(mobile) {
       font-size: 2em;
     }
