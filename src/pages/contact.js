@@ -1,5 +1,5 @@
 import React from 'react';
-import Page from '../components/Page';
+import Page from '../components/Page/Page';
 
 const ContactPage = () => (
   <Page title="Contact">

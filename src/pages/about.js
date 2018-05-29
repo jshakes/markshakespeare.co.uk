@@ -1,6 +1,6 @@
 import React from 'react';
 import Img from 'gatsby-image';
-import Page from '../components/Page';
+import Page from '../components/Page/Page';
 
 const AboutPage = ({ data }) => (
   <Page title="About">

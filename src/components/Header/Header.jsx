@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'gatsby-link';
-import BgImage from '../BgImage';
+import BgImage from '../BgImage/BgImage';
 import { siteMetadata } from '../../../gatsby-config';
 
 const Header = ({ isHome, headerImage }) => {

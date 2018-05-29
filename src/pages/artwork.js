@@ -1,6 +1,6 @@
 import React from 'react';
-import ImageGrid from '../components/ImageGrid';
-import Page from '../components/Page';
+import ImageGrid from '../components/ImageGrid/ImageGrid';
+import Page from '../components/Page/Page';
 
 // Captions in order of source filename alphabetical from /src/img/artwork
 const captions = [

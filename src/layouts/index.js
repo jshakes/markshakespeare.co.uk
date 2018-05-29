@@ -1,8 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import Helmet from 'react-helmet';
-import Header from '../components/Header';
-import Navigation from '../components/Navigation';
+import Header from '../components/Header/Header';
+import Navigation from '../components/Navigation/Navigation';
 import { siteMetadata } from '../../gatsby-config';
 
 import '../scss/main.scss';
