@@ -6,9 +6,12 @@ const PERMALINK_PREFIX = 'gallery-image-';
 
 class ImageGrid extends Component {
   
-  state = {
-    lightboxIsOpen: false,
-    currentImage: 0
+  constructor(props) {
+    super(props);
+    this.state = {
+      lightboxIsOpen: false,
+      currentImage: 0
+    };
   }
   
   componentDidMount() {
