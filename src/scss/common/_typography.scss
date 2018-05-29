@@ -1,5 +1,5 @@
 $font-base: 'Chiswick Grotesque', sans-serif;
-$font-display: 'Chiswick Grotesque', Georgia, serif;
+$font-display: 'PT Serif', Georgia, serif;
 
 * {
   -webkit-font-smoothing: antialiased;
@@ -30,6 +30,8 @@ a {
   color: inherit;
 }
 
+ol,
+ul,
 p {
   line-height: 1.666666;
   font-size: 1em;
