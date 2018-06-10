@@ -68,3 +68,11 @@
     }
   }
 }
+
+.site-header__logo {
+  width: 80px;
+  
+  @include larger-than(mobile) {
+    width: auto;
+  }
+}
