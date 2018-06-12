@@ -3,6 +3,8 @@
   margin-bottom: $height-content-padding-mobile;
   position: relative;
   background-color: #ECF2F6;
+  border-bottom: 0.25em solid $color-accent-1;
+  
   .gatsby-image-outer-wrapper {
     position: static !important; 
   }

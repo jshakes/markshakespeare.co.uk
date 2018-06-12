@@ -21,6 +21,6 @@
   &:hover,
   &.site-nav__link--active {
     color: $color-accent-1;
-    border-bottom: 3px solid $color-accent-1;
+    border-bottom: 0.25em solid $color-accent-1;
   }
 }
