@@ -8,7 +8,6 @@ const IndexPage = ({ data }) => (
     <div className="home-page__module">
       <div className="home-page__copy-container">
         <p>Mark is a practising art therapist with over thirty years of experience. He is available to hire for indivdual sessions, workshops and talks.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non aliquam turpis. Nam non eleifend lorem. Proin finibus feugiat velit, quis dignissim diam efficitur eget. Nam ullamcorper ligula at elit tempus dapibus.</p>
         <Link className="cta" to="/services">All services</Link>
       </div>
       <div className="home-page__image-container">
@@ -22,7 +21,6 @@ const IndexPage = ({ data }) => (
     <div className="home-page__module">
       <div className="home-page__copy-container">
         <p>Mark also continues to paint and draw. A small selection of his work can be found on this site, some of which is for sale.</p>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non aliquam turpis. Nam non eleifend lorem. Proin finibus feugiat velit, quis dignissim diam efficitur eget. Nam ullamcorper ligula at elit tempus dapibus.</p>
         <Link className="cta" to="/artwork">See artwork</Link>
       </div>
       <div className="home-page__image-container">
@@ -44,7 +42,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    paintingImage: imageSharp(id: { regex: "/artwork/1/" }) {
+    paintingImage: imageSharp(id: { regex: "/artwork/12/" }) {
       sizes(maxWidth: 560) {
         ...GatsbyImageSharpSizes
       }

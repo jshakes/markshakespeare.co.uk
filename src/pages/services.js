@@ -26,7 +26,7 @@ const ServicesPage = () => (
     <p>Workshops will often be more structured and focussed on addressing the needs of the group, helping individuals to find their own creative expression and to build confidence in relationships and with oneself.</p>
     <p>An art therapist goes through rigorous training and is present to assure clients that the work is confidential, and an appropriate agreement is made between the therapist and client as to the nature of that confidentiality.</p>
     <p>Whether provided in groups or individually Art Therapy is not a recreational activity or an art lesson, although the sessions can be enjoyable. Clients do not need to have any previous experience or expertise in art.</p>
-    <p><a className="cta" href="#">Email Mark for more information</a></p>
+    <p><a className="cta" href="mailto:info@markshakespeare.co.uk">Email Mark for more information</a></p>
   </Page>
 );
 
