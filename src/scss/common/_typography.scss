@@ -1,5 +1,5 @@
 $font-base: 'Chiswick Grotesque', sans-serif;
-$font-display: 'PT Serif', Georgia, serif;
+$font-display: $font-base;
 
 * {
   -webkit-font-smoothing: antialiased;
