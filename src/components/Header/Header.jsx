@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'gatsby-link';
 import BgImage from '../BgImage/BgImage';
-import logo from '../../img/logo-small.svg';
+import logoSmall from '../../img/logo-small.svg';
+import logoFull from '../../img/logo-full.svg';
 import { siteMetadata } from '../../../gatsby-config';
 
 const Header = ({ isHome, headerImage }) => {
@@ -21,7 +22,7 @@ const Header = ({ isHome, headerImage }) => {
       </span>
     );
   }
-  
+  const logo = isHome ? logoSmall : logoFull;
   return (
     <header className={isHome ? 'site-header--home' : 'site-header'}>
       <div className="site-header__content">
