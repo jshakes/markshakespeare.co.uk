@@ -42,7 +42,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes
       }
     }
-    paintingImage: imageSharp(id: { regex: "/artwork/12/" }) {
+    paintingImage: imageSharp(id: { regex: "/artwork/ranmore-pastel/" }) {
       sizes(maxWidth: 560) {
         ...GatsbyImageSharpSizes
       }

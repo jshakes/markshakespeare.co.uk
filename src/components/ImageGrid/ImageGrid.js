@@ -13,23 +13,6 @@ class ImageGrid extends Component {
       currentImage: 0
     };
   }
-  
-  componentDidMount() {
-    if(window.location.hash.indexOf(PERMALINK_PREFIX) > -1) {
-      this.openPermalink();
-    }
-  }
-  
-  componentDidUpdate() {
-    const { currentImage } = this.state;
-    window.location.hash = PERMALINK_PREFIX + (currentImage + 1);
-  }
-  
-  openPermalink() {
-    const hashArr = window.location.hash.split(PERMALINK_PREFIX);
-    const item = parseInt(hashArr[1]);
-    this.openLightbox(item - 1);
-  }
     
   openLightbox(image = 0) {
     this.setState({
@@ -62,7 +45,7 @@ class ImageGrid extends Component {
     const { images } = this.props;
     return (
       <ul className="image-gallery__items">
-        {images.map(this.renderGalleryItem.bind(this))}
+        {images.map( this.renderGalleryItem.bind(this) )}
       </ul>
     );
   }
@@ -76,7 +59,11 @@ class ImageGrid extends Component {
   }
   
   render() {
-    const largeImages = this.props.images.map(image => image.large);
+    const largeImages = this.props.images.map( ( { caption, large } ) => ( {
+      ...large,
+      caption,
+    } ) );
+
     return (
       <div className="image-gallery">
         {this.renderGallery()}

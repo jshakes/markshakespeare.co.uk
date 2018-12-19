@@ -44,7 +44,7 @@ export const pageQuery = graphql`
         ...GatsbyImageSharpSizes_noBase64
       }
     }
-    ogImage: imageSharp(id: { regex: "/artwork/1/" }) {
+    ogImage: imageSharp(id: { regex: "/artwork/peter/" }) {
       resize(width: 1280) {
         src
       }
