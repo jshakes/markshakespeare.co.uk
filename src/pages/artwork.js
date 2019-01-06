@@ -58,6 +58,10 @@ const sections = [
         file: 'murano.jpg',
         caption: 'Pastel on paper',        
       },
+      {
+        file: 'southbank.jpg',
+        caption: 'Pastel on paper',        
+      },
     ],
   },
   {
@@ -93,6 +97,10 @@ const sections = [
       },
       {
         file: 'perrotts.jpg',
+        caption: 'Acrylic on canvas',
+      },
+      {
+        file: 'venice-2.jpg',
         caption: 'Acrylic on canvas',
       },
     ],
@@ -141,6 +149,27 @@ const sections = [
         file: 'cornac.jpg',
         caption: 'Watercolour on paper',
       }
+    ]
+  },
+  {
+    title: 'Life drawing',
+    works: [
+      {
+        file: 'life-drawing-1.jpg',
+        caption: 'Pencil on paper'
+      },
+      {
+        file: 'life-drawing-2.jpg',
+        caption: 'Sepia on paper'
+      },
+      {
+        file: 'life-drawing-3.jpg',
+        caption: 'Charcoal and chalk on paper'
+      },
+      {
+        file: 'life-drawing-4.jpg',
+        caption: 'Charcoal on paper'
+      },
     ]
   }
 ];
