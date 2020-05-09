@@ -7,6 +7,34 @@ const sections = [
     title: 'Pastel and charcoal',
     works: [
       {
+        file: 'pastel-woods-1.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-2.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-3.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-4.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-5.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-6.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
+        file: 'pastel-woods-7.jpg',
+        caption: 'Pastel on paper',
+      },
+      {
         file: 'ranmore.jpg',
         caption: 'Pencil on paper',
       },
