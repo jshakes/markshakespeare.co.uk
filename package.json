@@ -5,7 +5,7 @@
   "homepage": "https://markshakespeare.co.uk",
   "repository": "https://github.com/jshakes/markshakespeare.co.uk",
   "dependencies": {
-    "gatsby": "^1.9.279",
+    "gatsby": "^5.3.3",
     "gatsby-image": "^1.0.34",
     "gatsby-link": "^1.6.34",
     "gatsby-plugin-favicon": "^2.1.1",
