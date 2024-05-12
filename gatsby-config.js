@@ -2,7 +2,7 @@ module.exports = {
   siteMetadata: {
     title: 'Mark Shakespeare',
     author: 'Mark Shakespeare',
-    description: 'Mark Shakespeare is a freelance art therapist and artist based in Dorking, Surrey',
+    description: 'Mark Shakespeare is a freelance art practitioner and artist based in Dorking, Surrey',
     siteUrl: 'https://markshakespeare.co.uk',
     locale: 'en_UK',
   },
