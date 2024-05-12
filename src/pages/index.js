@@ -7,7 +7,7 @@ const IndexPage = ({ data }) => (
     <h2>Art Therapy Services in Surrey</h2>
     <div className="home-page__module">
       <div className="home-page__copy-container">
-        <p>Mark is a practising art therapist with over thirty years of experience. He is available to hire for indivdual sessions, workshops and talks.</p>
+        <p>Mark is a practising art therapist with over thirty years of experience. He is available to hire for individual sessions, workshops and talks.</p>
         <Link className="cta" to="/services">All services</Link>
       </div>
       <div className="home-page__image-container">
