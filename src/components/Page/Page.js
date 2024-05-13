@@ -4,7 +4,7 @@ import {siteMetadata} from '../../../gatsby-config';
 import Layout from "../Layout";
 
 const Page = ({title, children}) => (
-    <Layout>
+    <Layout isHome={false}>
         <div className="page">
             <Helmet>
                 <title>{`${title} - ${siteMetadata.title}`}</title>

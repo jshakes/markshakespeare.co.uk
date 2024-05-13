@@ -8,9 +8,7 @@ import '../scss/main.scss';
 
 const d = new Date();
 
-export default ({ children }) => {
-  const isHome = window.location.pathname === '/';
-
+export default ({ children, isHome }) => {
   const query = useStaticQuery(graphql`
       query LayoutImages {
         headerImage: file(relativePath: { eq: "header-bg.jpg" }) {

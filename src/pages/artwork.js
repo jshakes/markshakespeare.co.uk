@@ -206,10 +206,9 @@ const sections = [
 const ArtworkPage = ( { data } ) => {
   const allImages = {};
 
+
   data.allFile.edges.forEach( ( { node } ) => {
     const { childImageSharp, ext, name } = node;
-    console.log({node});
-
     if ( ! childImageSharp ) {
       return;
     }
@@ -224,6 +223,7 @@ const ArtworkPage = ( { data } ) => {
       }
     };
   });
+  console.log({allImages});
 
   return (
     <Page title="Artwork">
@@ -236,9 +236,9 @@ const ArtworkPage = ( { data } ) => {
           } ) );
 
           return (
-            <section>
+            <section key={title}>
               <h2>{title}</h2>
-              {/*<ImageGrid images={images} />*/}
+              <ImageGrid images={images} />
             </section>
           );
         } )
@@ -250,29 +250,23 @@ const ArtworkPage = ( { data } ) => {
 export default ArtworkPage;
 
 export const pageQuery = graphql`
-query ArtworkPageImages {
-  allFile(
-    filter: {
-      id: {
-        regex: "/img/artwork/"
-      }
-    }
-  ) {
-    edges {
-      node {
-        ext
-        name
-        childImageSharp {
-          thumbnail: fixed(width: 364, height: 364) {
-            ...GatsbyImageSharpFixed_noBase64
+  query {
+    allFile(filter: { dir: { regex: "/artwork/" } }) {
+      edges {
+        node {
+          id
+          ext
+          name
+          childImageSharp {
+            thumbnail: fixed(width: 364, height: 364) {
+              ...GatsbyImageSharpFixed
+            }
+            large: fixed(width: 1280) {
+              ...GatsbyImageSharpFixed
+            }
           }
-          large: fixed(width: 1280) {
-            ...GatsbyImageSharpFixed_noBase64
-          }
-          
         }
       }
     }
   }
-}
 `;

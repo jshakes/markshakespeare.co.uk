@@ -4,7 +4,7 @@ import {graphql, Link} from 'gatsby'
 import Layout from '../components/Layout';
 
 const IndexPage = ({data}) => (
-    <Layout>
+    <Layout isHome={true}>
         <div className="page home-page">
             <h2>Art Workshops in Surrey</h2>
             <div className="home-page__module">

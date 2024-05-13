@@ -40,23 +40,6 @@ class ImageGrid extends Component {
     });
   }
   
-  renderGallery() {
-    const { images } = this.props;
-    return (
-      <ul className="image-gallery__items">
-        {images.map( this.renderGalleryItem.bind(this) )}
-      </ul>
-    );
-  }
-  
-  renderGalleryItem(image, index) {
-    return (
-      <li className="image-gallery__item" key={index} onClick={() => this.openLightbox(index)}>
-        <Img fixed={image.thumbnail.fixed} className="image-gallery__image" />
-      </li>
-    );
-  }
-  
   render() {
     const largeImages = this.props.images.map( ( { caption, large } ) => ( {
       ...large,
@@ -65,7 +48,13 @@ class ImageGrid extends Component {
 
     return (
       <div className="image-gallery">
-        {this.renderGallery()}
+        <ul className="image-gallery__items">
+          {this.props.images.map( (image, index) => (
+              <li className="image-gallery__item" key={index} onClick={() => this.openLightbox(index)}>
+                <Img fixed={image.thumbnail} alt={image.caption} className="image-gallery__image" />
+              </li>
+          ) )}
+        </ul>
         {/*<Lightbox*/}
         {/*  images={largeImages}*/}
         {/*  close={this.closeLightbox.bind(this)}*/}
