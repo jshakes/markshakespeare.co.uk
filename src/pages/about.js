@@ -7,7 +7,7 @@ const AboutPage = ({ data }) => (
   <Page title="About">
     <div className="about-page">
       <div className="about-page__key-image">
-        <Img sizes={data.profileImage.sizes} alt="A photo of Mark Shakespeare" />
+        <Img fluid={data.profileImage.childImageSharp.fluid} alt="A photo of Mark Shakespeare" />
       </div>
       <p>Mark studied Fine Art at Sheffield University before going on to train as an art therapist in 1985. He has since worked in the NHS providing an art therapy service for people with learning disabilities in Surrey. He retired from his role as Lead Consultant Art Therapist with Surrey & Borders Partnership NHS FT in 2015.</p>
       <p>Mark now works as a freelance art practitioner running workshops for groups as well as individual sessions.</p>
@@ -23,9 +23,11 @@ export default AboutPage;
 
 export const pageQuery = graphql`
   query AboutPageImages {
-    profileImage: imageSharp(id: { regex: "/profile/" }) {
-      fixed(width: 560) {
-        ...GatsbyImageSharpFixed
+    profileImage: file(relativePath: { eq: "profile.jpg" }) {
+      childImageSharp {
+        fluid(maxWidth: 560) {
+          ...GatsbyImageSharpFluid
+        }
       }
     }
   }

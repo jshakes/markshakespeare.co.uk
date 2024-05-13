@@ -208,6 +208,7 @@ const ArtworkPage = ( { data } ) => {
 
   data.allFile.edges.forEach( ( { node } ) => {
     const { childImageSharp, ext, name } = node;
+    console.log({node});
 
     if ( ! childImageSharp ) {
       return;
@@ -237,7 +238,7 @@ const ArtworkPage = ( { data } ) => {
           return (
             <section>
               <h2>{title}</h2>
-              <ImageGrid images={images} />
+              {/*<ImageGrid images={images} />*/}
             </section>
           );
         } )
@@ -268,6 +269,7 @@ query ArtworkPageImages {
           large: fixed(width: 1280) {
             ...GatsbyImageSharpFixed_noBase64
           }
+          
         }
       }
     }

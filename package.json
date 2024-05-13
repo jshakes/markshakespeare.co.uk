@@ -11,7 +11,6 @@
     "babel-plugin-styled-components": "^2.1.4",
     "gatsby": "^5.13.4",
     "gatsby-image": "^3.11.0",
-    "gatsby-link": "^5.13.1",
     "gatsby-plugin-netlify": "^5.1.1",
     "gatsby-plugin-react-helmet": "^6.13.1",
     "gatsby-plugin-sass": "^6.13.1",

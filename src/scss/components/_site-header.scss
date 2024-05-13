@@ -4,6 +4,7 @@
   position: relative;
   background-color: #ECF2F6;
   border-bottom: 0.25em solid $color-accent-1;
+  overflow: hidden;
   
   .gatsby-image-outer-wrapper {
     position: static !important; 

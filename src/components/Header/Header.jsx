@@ -1,5 +1,5 @@
 import React from 'react';
-import Link from 'gatsby-link';
+import {Link} from 'gatsby';
 import BgImage from '../BgImage/BgImage';
 import logoSmall from '../../img/logo-small.svg';
 import logoFull from '../../img/logo-full.svg';
@@ -36,7 +36,7 @@ const Header = ({ isHome, headerImage }) => {
           </span>
         }
       </div>
-      <BgImage sizes={headerImage.sizes} />
+      <BgImage fixed={headerImage.childImageSharp.fixed} />
     </header>
   );  
 };
