@@ -25,6 +25,13 @@ export default ({ children, isHome }) => {
             }
           }
         }
+        favicon: file(relativePath: { eq: "favicon.png" }) {
+            childImageSharp {
+                resize(height: 64) {
+                   src
+                }
+              }
+          }
       }
     `);
 
@@ -43,12 +50,13 @@ export default ({ children, isHome }) => {
         <meta property="og:url" content={siteMetadata.siteUrl} />
         <meta property="og:locale" content={siteMetadata.locale} />
         <meta name="twitter:card" content="summary" />
+        <link rel="icon" href={query.favicon.childImageSharp.resize.src} />
       </Helmet>
       <Header isHome={isHome} headerImage={query.headerImage} />
       <div className="content-wrapper">
         <Navigation />
         {children}
-        <footer className="site-footer">&copy; Mark Shakespeare, {d.getFullYear()}</footer>
+        <footer className="site-footer">© Mark Shakespeare, {d.getFullYear()}</footer>
       </div>
     </div>
   );

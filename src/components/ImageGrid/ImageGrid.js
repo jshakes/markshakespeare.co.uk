@@ -7,7 +7,6 @@ function ImageGrid(props) {
   const [lightboxOpen, setLightboxOpen] = useState(false);
   const [currentSlideIndex, setCurrentSlideIndex] = useState(null);
 
-    console.log(props.images[0].large)
   return (
     <div className="image-gallery">
       <ul className="image-gallery__items">
