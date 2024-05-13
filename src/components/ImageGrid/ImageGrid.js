@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Lightbox from 'react-images';
 import Img from 'gatsby-image';
 
 const PERMALINK_PREFIX = 'gallery-image-';
@@ -67,14 +66,14 @@ class ImageGrid extends Component {
     return (
       <div className="image-gallery">
         {this.renderGallery()}
-        <Lightbox
-          images={largeImages}
-          onClose={this.closeLightbox.bind(this)}
-          isOpen={this.state.lightboxIsOpen}
-          currentImage={this.state.currentImage}
-          onClickNext={this.gotoNext.bind(this)}
-          onClickPrev={this.gotoPrevious.bind(this)}
-        />
+        {/*<Lightbox*/}
+        {/*  images={largeImages}*/}
+        {/*  close={this.closeLightbox.bind(this)}*/}
+        {/*  open={this.state.lightboxIsOpen}*/}
+        {/*  currentImage={this.state.currentImage}*/}
+        {/*  onClickNext={this.gotoNext.bind(this)}*/}
+        {/*  onClickPrev={this.gotoPrevious.bind(this)}*/}
+        {/*/>*/}
       </div>
     );
   }

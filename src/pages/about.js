@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Page from '../components/Page/Page';
+import { graphql } from 'gatsby'
 
 const AboutPage = ({ data }) => (
   <Page title="About">
@@ -23,8 +24,8 @@ export default AboutPage;
 export const pageQuery = graphql`
   query AboutPageImages {
     profileImage: imageSharp(id: { regex: "/profile/" }) {
-      sizes(maxWidth: 560) {
-        ...GatsbyImageSharpSizes
+      fixed(width: 560) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

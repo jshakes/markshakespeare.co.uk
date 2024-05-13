@@ -4,24 +4,27 @@
   "author": "James Shakespeare <j@jshakespeare.com>",
   "homepage": "https://markshakespeare.co.uk",
   "repository": "https://github.com/jshakes/markshakespeare.co.uk",
+  "engines": {
+    "node": ">=14.0.0"
+  },
   "dependencies": {
-    "gatsby": "^1.9.279",
-    "gatsby-image": "^1.0.34",
-    "gatsby-link": "^1.6.34",
-    "gatsby-plugin-favicon": "^2.1.1",
-    "gatsby-plugin-google-analytics": "^1.0.15",
-    "gatsby-plugin-netlify": "^1.0.14",
-    "gatsby-plugin-react-helmet": "^2.0.3",
-    "gatsby-plugin-sass": "^1.0.15",
-    "gatsby-plugin-sharp": "^1.6.27",
-    "gatsby-plugin-sitemap": "^1.2.10",
-    "gatsby-plugin-styled-components": "^2.0.5",
-    "gatsby-source-filesystem": "^1.5.15",
-    "gatsby-transformer-sharp": "^1.6.17",
+    "babel-plugin-styled-components": "^2.1.4",
+    "gatsby": "^5.13.4",
+    "gatsby-image": "^3.11.0",
+    "gatsby-link": "^5.13.1",
+    "gatsby-plugin-netlify": "^5.1.1",
+    "gatsby-plugin-react-helmet": "^6.13.1",
+    "gatsby-plugin-sass": "^6.13.1",
+    "gatsby-plugin-sharp": "^5.13.1",
+    "gatsby-plugin-sitemap": "^6.13.1",
+    "gatsby-plugin-styled-components": "^6.13.1",
+    "gatsby-source-filesystem": "^5.13.1",
+    "gatsby-transformer-sharp": "^5.13.1",
     "object-fit-images": "^3.2.3",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
     "react-helmet": "^5.2.0",
-    "react-images": "^0.5.14",
-    "styled-components": "^3.0.2"
+    "styled-components": "^6.1.11"
   },
   "keywords": [
     "gatsby"

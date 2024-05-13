@@ -1,6 +1,7 @@
 import React from 'react';
 import ImageGrid from '../components/ImageGrid/ImageGrid';
 import Page from '../components/Page/Page';
+import { graphql } from 'gatsby'
 
 const sections = [
   {
@@ -261,11 +262,11 @@ query ArtworkPageImages {
         ext
         name
         childImageSharp {
-          thumbnail: resolutions(width: 364, height: 364) {
-            ...GatsbyImageSharpResolutions_noBase64
+          thumbnail: fixed(width: 364, height: 364) {
+            ...GatsbyImageSharpFixed_noBase64
           }
-          large: sizes(maxWidth: 1280) {
-            ...GatsbyImageSharpSizes_noBase64
+          large: fixed(width: 1280) {
+            ...GatsbyImageSharpFixed_noBase64
           }
         }
       }

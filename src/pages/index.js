@@ -1,6 +1,7 @@
 import React from 'react';
 import Img from 'gatsby-image';
 import Link from 'gatsby-link';
+import { graphql } from 'gatsby'
 
 const IndexPage = ({ data }) => (
   <div className="page home-page">
@@ -38,13 +39,13 @@ export default IndexPage;
 export const pageQuery = graphql`
   query HomePageImages {
     workshopImage: imageSharp(id: { regex: "/workshop/" }) {
-      sizes(maxWidth: 560) {
-        ...GatsbyImageSharpSizes
+      fixed(width: 560) {
+        ...GatsbyImageSharpFixed
       }
     }
     paintingImage: imageSharp(id: { regex: "/artwork/ranmore-pastel/" }) {
-      sizes(maxWidth: 560) {
-        ...GatsbyImageSharpSizes
+      fixed(width: 560) {
+        ...GatsbyImageSharpFixed
       }
     }
   }

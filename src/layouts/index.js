@@ -4,7 +4,7 @@ import Helmet from 'react-helmet';
 import Header from '../components/Header/Header';
 import Navigation from '../components/Navigation/Navigation';
 import { siteMetadata } from '../../gatsby-config';
-
+import { graphql } from 'gatsby'
 import '../scss/main.scss';
 
 const d = new Date();
@@ -40,8 +40,8 @@ export default ({ data, location, children }) => {
 export const pageQuery = graphql`
   query LayoutImages {
     headerImage: imageSharp(id: { regex: "/header-bg/" }) {
-      sizes(maxWidth: 1440 ) {
-        ...GatsbyImageSharpSizes_noBase64
+      fixed(width: 1440 ) {
+        ...GatsbyImageSharpFixed_noBase64
       }
     }
     ogImage: imageSharp(id: { regex: "/artwork/peter/" }) {
