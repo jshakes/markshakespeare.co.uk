@@ -219,7 +219,7 @@ const ArtworkPage = ( { data } ) => {
       thumbnail,
       large: {
         ...large,
-        srcSet: large.srcSet.split(',')
+        srcSet: undefined
       }
     };
   });

@@ -1,71 +1,33 @@
-import React, { Component } from 'react';
+import React, { useState } from 'react';
 import Img from 'gatsby-image';
+import Lightbox from "yet-another-react-lightbox";
+import "yet-another-react-lightbox/styles.css";
 
-const PERMALINK_PREFIX = 'gallery-image-';
+function ImageGrid(props) {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+  const [currentSlideIndex, setCurrentSlideIndex] = useState(null);
 
-class ImageGrid extends Component {
-  
-  constructor(props) {
-    super(props);
-    this.state = {
-      lightboxIsOpen: false,
-      currentImage: 0
-    };
-  }
-    
-  openLightbox(image = 0) {
-    this.setState({
-      lightboxIsOpen: true,
-      currentImage: image
-    });
-  }
-  
-  closeLightbox() {
-    this.setState({
-      lightboxIsOpen: false      
-    }, () => {
-      window.location.hash = '';
-    });
-  }
-  
-  gotoNext() {
-    this.setState({
-      currentImage: this.state.currentImage + 1
-    });
-  }
-  
-  gotoPrevious() {
-    this.setState({
-      currentImage: this.state.currentImage - 1
-    });
-  }
-  
-  render() {
-    const largeImages = this.props.images.map( ( { caption, large } ) => ( {
-      ...large,
-      caption,
-    } ) );
-
-    return (
-      <div className="image-gallery">
-        <ul className="image-gallery__items">
-          {this.props.images.map( (image, index) => (
-              <li className="image-gallery__item" key={index} onClick={() => this.openLightbox(index)}>
-                <Img fixed={image.thumbnail} alt={image.caption} className="image-gallery__image" />
-              </li>
-          ) )}
-        </ul>
-        {/*<Lightbox*/}
-        {/*  images={largeImages}*/}
-        {/*  close={this.closeLightbox.bind(this)}*/}
-        {/*  open={this.state.lightboxIsOpen}*/}
-        {/*  currentImage={this.state.currentImage}*/}
-        {/*  onClickNext={this.gotoNext.bind(this)}*/}
-        {/*  onClickPrev={this.gotoPrevious.bind(this)}*/}
-        {/*/>*/}
-      </div>
-    );
-  }
+    console.log(props.images[0].large)
+  return (
+    <div className="image-gallery">
+      <ul className="image-gallery__items">
+        {props.images.map( (image, index) => (
+            <li className="image-gallery__item" key={index} onClick={() => {
+                setLightboxOpen(true);
+                setCurrentSlideIndex(index)
+            }}>
+              <Img fixed={image.thumbnail} alt={image.caption} className="image-gallery__image" />
+            </li>
+        ) )}
+      </ul>
+      <Lightbox
+        slides={props.images.map(image => image.large)}
+        close={() => setLightboxOpen(false)}
+        open={lightboxOpen}
+        index={currentSlideIndex}
+      />
+    </div>
+  );
 };
 
 export default ImageGrid;
